@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    /* primary*/
+    --cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    /*Neutral*/
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --font-size:16px;
+}
+
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light-Gray);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+main{
+    background-color: white;
+    margin: 0 auto;
+    width:634px;
+    height:472px;
+    display:grid;
+    grid-template-rows: 45% 55%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 20%);
+}
+
+.row_1{
+    padding: 15px 30px;
+    color:var(--Grayish-Blue);
+}
+
+h1{
+    font-size: 1.5rem;
+    color:var(--cyan);
+}
+
+.row_1 h3{
+    color:var(--Bright-Yellow);
+}
+
+.row_1 p{
+    line-height: 1.8rem;
+    font-size: 1.05rem;
+}
+
+.row_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color:white;
+}
+
+section{
+    padding: 15px 30px;
+}
+
+section h3{
+    font-weight: 400;
+}
+
+.left{
+    background-color: var(--cyan);
+}
+
+.right{
+    background-color: hsl(179, 62%, 43%, 75%);
+}
+
+.price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price .sr-only{
+    position: absolute;
+    visibility: collapse;
+}
+
+.price::after{
+    content:"per month";
+    font-size: 1rem;
+    font-weight: 400;
+    color:rgba(255, 255, 255, 50%);
+    position: relative;
+    top:-5px;
+}
+
+button{
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--Bright-Yellow);
+    font:inherit;
+    color:white;
+    border:transparent;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px  rgb(0, 0, 0, 15%);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.right p{
+    color:rgb(255, 255, 255, 75%);
+    margin-right: 50px;
+}
+
+@media  (max-width: 430px) {
+    body{
+        height: unset;
+    }
+    main{
+        width: 100%;
+        height:auto;
+        grid:unset;
+    }
+    .row_2{
+        display: flex;
+        flex-direction: column;
+    }
+    section{
+        width: 100%;
+        display: inline-block;
+    }
+}
